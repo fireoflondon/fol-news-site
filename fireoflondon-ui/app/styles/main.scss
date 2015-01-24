@@ -1,5 +1,11 @@
-$fa-font-path:"/bower_components/font-awesome/fonts";
-@import "font-awesome/scss/font-awesome";
+@import "bootstrap/bootstrap.min.css";
+@import "vitality-red.css";
+@import "plugins/owl-carousel/owl.carousel.css";
+@import "plugins/owl-carousel/owl.theme.css";
+@import "plugins/owl-carousel/owl.transitions.css";
+@import "plugins/magnific-popup.css";
+@import "plugins/jquery.fs.wallpaper.css";
+@import "plugins/animate.css";
 
 $fireRed: #990000;
 $textColor: #FFFFFF;
@@ -28,7 +34,7 @@ a {
 }
 
 header.home-header-image {
-  background-image: url('image/bg-header.png');
+  background-image: url('../images/bg-header.png');
 }
 
 footer {
