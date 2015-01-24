@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <title>Fire of London</title>
+    <metadata>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </metadata>
+    <stylesheets>
+      <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="styles/vitality-red.css">
+
+      <link href="styles/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+      <link href="styles/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+      <link href="styles/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
+      <link href="styles/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
+      <link href="styles/plugins/jquery.fs.wallpaper.css" rel="stylesheet" type="text/css">
+      <link href="styles/plugins/animate.css" rel="stylesheet" type="text/css">
+
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
+
+      <link rel="stylesheet" href="styles/main.css">
+    </stylesheets>
+  </head>
+  <body ng-app="fireoflondonApp" ng-class="{fireBackground: !$state.includes('login')}">
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-expanded" ng-class="{articleMenu: !$state.includes('home')}">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/#/home">
+            <div class="brand-name">Fire</div>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li ng-class="{active: $state.includes('home')}">
+              <a href="#about">About</a>
+            </li>
+            <li ng-class="{active: $state.includes('article') || $state.includes('news')}">
+              <a href="/#/news">News</a>
+            </li>
+            <!--<li>-->
+              <!--<a href="/#/events">Events</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="/#/roster">Roster</a>-->
+            <!--</li>-->
+            <!--<li>-->
+              <!--<a href="/#/gallery">Gallery</a>-->
+            <!--</li>-->
+            <li>
+              <a href="/#/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <div ui-view autoscroll="true"></div>
+    <div class="row">
+      <div class="google-maps"  ng-show="!$state.includes('login')">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2482.219768537597!2d0.007122969589233398!3d51.527528835710406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x2bd074e6ac60b506!2sMemorial+Recreation+Ground!5e0!3m2!1sen!2suk!4v1417388640757" width="600" height="200" frameborder="0" style="border:0"></iframe>
+      </div>
+      <footer ng-show="!$state.includes('login')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <address>
+            <strong>We train on 3G at:</strong><br />
+            Memorial Recreation Ground<br />
+            Memorial Avenue<br />
+            Stratford<br />
+            E13 0HQ<br />
+            Tube: West Ham (District Line).<br />
+            National Rail: West Ham.<br />
+            Bus: #69 &amp; #276.<br />
+          </address>
+        </div>
+        <div class="col-lg-4">
+          <address>
+            <strong>We can be contacted by:</strong><br />
+            Email: captains@fireoflondon.org<br />
+            Twitter: @Fire_Of_London<br />
+            Facebook: FireOfLondon<br />
+          </address>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <sponsor>
+              <name>Our kit is supplied by 5Ultimate</name>
+              <img src="5ultimate.gif"/>
+            </sponsor>
+          </div>
+          <div class="row">
+            <sponsor>
+              <name>Our Fitness Trainer is FitForUltimate</name>
+              <img src="fitforultimate.gif"/>
+            </sponsor>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>&copy; Copyright Fire of London Ultimate Frisbee Club 2014</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+    </div>
+  </body>
+  <javascript>
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="bower_components/userapp/userapp.client.js"></script>
+    <script src="bower_components/userapp-angular/angularjs.userapp.js"></script>
+
+    <script src="app/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="app/js/plugins/jquery.easing.min.js"></script>
+    <script src="app/js/plugins/classie.js"></script>
+    <script src="app/js/plugins/cbpAnimatedHeader.js"></script>
+    <script src="app/js/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="app/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="app/js/plugins/jquery.fs.wallpaper.js"></script>
+    <script src="app/js/plugins/jquery.mixitup.js"></script>
+    <script src="app/js/plugins/wow/wow.min.js"></script>
+    <script src="app/js/contact_me.js"></script>
+    <script src="app/js/plugins/jqBootstrapValidation.js"></script>
+
+    <script src="app/js/vitality.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config.js"></script>
+
+    <script src="services/blog_posts.js"></script>
+
+    <script src="scripts/home/home.js"></script>
+    <script src="scripts/contact/contact.js"></script>
+    <script src="scripts/login/login.js"></script>
+    <script src="scripts/news/news.js"></script>
+    <script src="scripts/news/article/article.js"></script>
+  </javascript>
+</html>

@@ -1,0 +1,47 @@
+<!--<div class="full-height">-->
+    <header style="background-image: url('assets/img/bg-header.png');">
+      <div class="intro-content">
+        <div class="brand-name">Fire</div>
+        <!--<hr class="colored">-->
+        <!--<div class="brand-name-subtext"><span class="primary">Fire of London</span></div>-->
+        <!--<div class="brand-name-subtext"><span class="secondary">Ultimate Frisbee Team</span></div>-->
+      </div>
+      <div class="scroll-down">
+        <a class="btn" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
+      </div>
+    </header>
+<!--</div>-->
+<section id="about">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 wow fadeIn">
+        <h1><span clas="major">Fire of London</span> <span class="minor">Ultimate Frisbee Team</span></h1>
+        <hr>
+        <p class="lead-text">Fire of London is one of the UK's top competitive teams, based in London. We train throughout spring and the summer season, and hold try outs in February.</p>
+        <p class="lead-text">We are always on the lookout for fresh talent, so if you think you have what it takes to play for Fire please get in touch.</p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <!--<div class="col-md-2 wow fadeIn" data-wow-delay=".2s"></div>-->
+      <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+        <div class="about-content">
+          <h3>Upcoming</h3>
+          <div class="post-divider" ng-repeat="post in posts | filter:{ terms: { category: [{name: 'Upcoming'}] } }">
+            <h4><a href="/#/news/article/{{ post.ID }}/{{ post.title }}">{{ post.title }}</a></h4>
+            <div ng-bind-html="post.excerpt"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+        <div class="about-content">
+          <h3>Latest News</h3>
+          <div class="post-divider" ng-repeat="post in posts | filter:{ terms: { category: [{name: 'Latest News'}] } }">
+            <h4><a href="/#/news/article/{{ post.ID }}/{{ post.title }}">{{ post.title }}</a></h4>
+            <div ng-bind-html="post.excerpt"></div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="col-md-2 wow fadeIn" data-wow-delay=".2s"></div>-->
+    </div>
+  </div>
+</section>
