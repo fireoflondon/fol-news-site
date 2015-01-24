@@ -2,6 +2,6 @@
 
 angular.module('configuration', [])
 
-.constant('API_URL', 'http://localhost:9000')
+.constant('API_URL', 'https://api.testlabs.io')
 
 ;
