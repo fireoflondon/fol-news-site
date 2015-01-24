@@ -346,7 +346,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-            'views/{,*/}*.html',
+            'scripts/**/*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -357,36 +357,15 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }, {
           expand: true,
-          cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-          dest: '<%= yeoman.dist %>'
+          cwd: 'bower_components/open-sans/fonts',
+          src: '**/*',
+          dest: '<%= yeoman.dist %>/fonts'
         }, {
           expand: true,
-          cwd: '.',
-          src: 'bower_components/font-awesome/fonts/*',
-          dest: '<%= yeoman.dist %>'
-        }, {
-          expand: true,
-          cwd: '.',
-          src: 'bower_components/*',
-          dest: '<%= yeoman.dist %>'
-        }, {
-            expand: true,
-            cwd: '.',
-            src: 'app/js/*',
-            dest: '<%= yeoman.dist %>'
-          },{
-          expand: true,
-          cwd: '.',
-          src: 'app/js/plugins/*',
-          dest: '<%= yeoman.dist %>'
-        },
-          {
-            expand: true,
-            cwd: '.',
-            src: 'app/js/bootstrap',
-            dest: '<%= yeoman.dist %>'
-          }]
+          cwd: 'bower_components/font-awesome/fonts',
+          src: '**/*',
+          dest: '<%= yeoman.dist %>/fonts'
+        }]
       },
       styles: {
         expand: true,
@@ -395,7 +374,6 @@ module.exports = function (grunt) {
         src: '{,*/}*.css'
       }
     },
-
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
