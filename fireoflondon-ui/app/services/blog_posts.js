@@ -3,7 +3,7 @@
 var app = angular.module('fireoflondonApp');
 
 app.factory('Posts', ['$resource', function ($resource) {
-    var Posts = $resource('http://dev.fireoflondon.org/wp-json/posts',
+    var Posts = $resource('http://wordpress.fireoflondon.org/wp-json/posts',
         {
             query: {
                 isArray: true,
@@ -17,6 +17,6 @@ app.factory('Posts', ['$resource', function ($resource) {
 }]);
 
 app.factory('Post', ['$resource', function($resource) {
-  return $resource('http://dev.fireoflondon.org/wp-json/posts/:articleId', { articleId: '@articleId'})
+  return $resource('http://wordpress.fireoflondon.org/wp-json/posts/:articleId', { articleId: '@articleId'})
 }]);
 
