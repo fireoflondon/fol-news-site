@@ -28,7 +28,7 @@
   <!-- endbuild -->
 </head>
 <body ng-app="fireoflondonApp" ng-class="{fireBackground: !$state.includes('login')}">
-<header class="home-header-image" ng-class="{hideHeader: !$state.includes('home')}">
+<header class="home-header-image" ng-show="$state.includes('home')">
   <div class="intro-content">
     <div class="brand-name">Fire</div>
   </div>
@@ -57,7 +57,7 @@
           <a href="#page-top"></a>
         </li>
         <li ng-class="{active: $state.includes('home')}">
-          <a href="#about">About</a>
+          <a href="#home">Home</a>
         </li>
         <li ng-class="{active: $state.includes('article') || $state.includes('news')}">
           <a href="/#/news">News</a>
@@ -71,7 +71,7 @@
   </div>
   <!-- /.container -->
 </nav>
-<div ui-view autoscroll="true"></div>
+<div ui-view></div>
 <div class="google-maps" ng-show="!$state.includes('login')">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2482.219768537597!2d0.007122969589233398!3d51.527528835710406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x2bd074e6ac60b506!2sMemorial+Recreation+Ground!5e0!3m2!1sen!2suk!4v1417388640757"

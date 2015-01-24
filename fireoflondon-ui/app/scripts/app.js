@@ -25,9 +25,13 @@ angular
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
       //user.init({ appId: '54725ba38d078' });
+      $rootScope.$on('$stateChangeSuccess', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+      });
     }
   ])
   .config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/home');
   }]);
+
