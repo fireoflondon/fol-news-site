@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.js','<%= yeoman.app %>/js/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -365,7 +365,17 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/font-awesome/fonts/*',
           dest: '<%= yeoman.dist %>'
-        }]
+        }, {
+          expand: true,
+          cwd: '.',
+          src: 'bower_components/*',
+          dest: '<%= yeoman.dist %>'
+        }, {
+            expand: true,
+            cwd: '.',
+            src: 'app/js/*',
+            dest: '<%= yeoman.dist %>'
+          }]
       },
       styles: {
         expand: true,
@@ -462,7 +472,7 @@ module.exports = function (grunt) {
     'concat',
     'ngmin',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
     'uglify',
     'filerev',
