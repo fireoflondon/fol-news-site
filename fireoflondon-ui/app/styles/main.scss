@@ -1,11 +1,5 @@
-@import "bootstrap/bootstrap.min.css";
-@import "vitality-red.css";
-@import "plugins/owl-carousel/owl.carousel.css";
-@import "plugins/owl-carousel/owl.theme.css";
-@import "plugins/owl-carousel/owl.transitions.css";
-@import "plugins/magnific-popup.css";
-@import "plugins/jquery.fs.wallpaper.css";
-@import "plugins/animate.css";
+$fa-font-path:"../fonts";
+@import "font-awesome/scss/font-awesome";
 
 $fireRed: #990000;
 $textColor: #FFFFFF;
