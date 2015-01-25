@@ -19,4 +19,3 @@ app.factory('Posts', ['$resource', function ($resource) {
 app.factory('Post', ['$resource', function($resource) {
   return $resource('http://wordpress.fireoflondon.org/?json_route=/posts/:articleId', { articleId: '@articleId'})
 }]);
-

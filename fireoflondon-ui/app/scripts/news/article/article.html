@@ -7,9 +7,8 @@
     </div>
   </div>
   <div class="container">
-    <div class="row text-center row-eq-height">
-      <!--<div class="col-lg-1 hidden-md"></div>-->
-      <div class="col-lg-8 col-md-8 col-sm-10 wow fadeIn" data-wow-delay=".2s">
+    <div class="row text-center">
+      <div class="col-lg-12 wow fadeIn" data-wow-delay=".2s">
         <div class="article-content">
             <h4>{{ post.title }}</h4>
             <div class="article-details">
@@ -18,12 +17,12 @@
             <div ng-bind-html="post.content"></div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 hidden-sm hidden-xs sidebar_content">
-        <h3>Latest News</h3>
-        <div ng-repeat="post in posts | filter:{ terms: { category: [{name: 'Latest News'}] } }">
-          <h4><a href="/#/news/article/{{ post.ID }}/{{ post.title }}">{{ post.title }}</a></h4>
-        </div>
-      </div>
+      <!--<div class="col-lg-4 col-md-4 hidden-sm hidden-xs sidebar_content">-->
+        <!--<h3>Latest News</h3>-->
+        <!--<div ng-repeat="post in posts | filter:{ terms: { category: [{name: 'Latest News'}] } }">-->
+          <!--<h4><a href="/#/news/article/{{ post.ID }}/{{ post.title }}">{{ post.title }}</a></h4>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
   </div>
 </section>

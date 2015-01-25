@@ -19,7 +19,7 @@ a {
   background-color:#FFFFFF;
 }
 header.home-header-image {
-  background-image: url('../images/bg-header.png');
+  background-image: url('../images/bg-header.jpg');
 }
 header.hideHeader {
   display:none;
@@ -64,7 +64,6 @@ footer {
     font-size:30px;
   }
   .article-content {
-    padding-right:40px;
     h4 {
       margin:40px 0px 10px 0px;
     }
@@ -120,6 +119,8 @@ footer {
   border-bottom:none;
 }
 .google-maps {
+  background-image: url("../images/google-map.gif");
+  background-position: center;
   position: relative;
   height: 200px;
   overflow: hidden;
