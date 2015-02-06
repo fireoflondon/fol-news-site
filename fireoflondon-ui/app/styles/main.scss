@@ -5,12 +5,24 @@ $fireRed: #990000;
 $textColor: #FFFFFF;
 
 body {
+  background-color: #222;
   .fireBackground {
     background-color: $fireRed;
   }
 }
 a {
   color:#FFFFFF;
+}
+.form-control {
+  border-radius: 0px;
+}
+.btn-fire {
+  background-color:#222;
+  border:1px solid #ccc;
+}
+.btn-fire:hover {
+  background-color:#222;
+  border:1px solid #ccc;
 }
 .articleMenu {
   background-color:#222 !important;

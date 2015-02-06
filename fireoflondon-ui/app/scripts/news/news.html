@@ -9,10 +9,9 @@
       <div class="col-md-2"></div>
       <div class="col-md-8 wow fadeIn" data-wow-delay=".2s">
           <article class="article-summary" ng-repeat="post in posts">
-            <div class="content-gutter">
-              <div class="container">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
+            <div class="content-gutter row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
                   <h5>{{ post.terms.category[0].name }}</h5>
                   <h4><a href="/#/news/article/{{ post.ID }}/{{ post.title }}">{{ post.title }}</a></h4>
                   <div class="row">
@@ -25,8 +24,7 @@
                   </div>
                   <excerpt ng-bind-html="post.excerpt"></excerpt><a href="/#/news/article/{{ post.ID }}/{{ post.title }}">Continue reading...</a>
                 </div>
-                <div class="col-md-2"></div>
-              </div>
+                <div class="col-md-1"></div>
             </div>
           </article>
         </div>
