@@ -12,7 +12,8 @@
         <div class="article-content">
             <h4>{{ post.title }}</h4>
             <div class="article-details">
-              <p>{{ post.author.nickname }}</p>
+              <p><i class="fa fa-user"></i> <author>{{ post.author.first_name }} {{ post.author.last_name }}</author></p>
+              <p><i class="fa fa-clock-o"></i> <date>{{ post.date | date:'medium' }}</date></p>
             </div>
             <div ng-bind-html="post.content"></div>
         </div>
